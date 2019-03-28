@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { RestProvider } from 'rest-hooks';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
+export default function App() {
+  return (
+    <RestProvider>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Edit <code>src/App.tsx</code> and save to reload.
           </p>
           <a
             className="App-link"
@@ -21,8 +20,6 @@ class App extends Component {
           </a>
         </header>
       </div>
-    );
-  }
+    </RestProvider>
+  );
 }
-
-export default App;
